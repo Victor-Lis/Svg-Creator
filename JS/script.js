@@ -7,17 +7,33 @@ const gerar = () =>{
 
     var inputName = document.getElementById("nome").value
 
+    for(var i = 0; i < inputName.length; i++){
+
+        if(inputName[i] == " "){
+
+            inputName = inputName.replace(" ", "%20")
+
+        }
+
+    }
+
+    console.log(inputName)
+
     var inputMale = document.getElementById("male")
 
     var inputFemale = document.getElementById("female")  
 
-    var inputInitial = ""
+    var inputBotts = document.getElementById("botts")  
 
-    console.log(inputName)
+    console.log("InputMale: "+inputMale.checked)
+    console.log("InputFemale: "+inputFemale.checked)
+    console.log("InputBotts: "+inputBotts.checked)
 
-    if(inputMale.checked == true && inputFemale.checked == true || inputMale.checked == true && inputInitial.checked == true || inputInitial.checked == true && inputFemale.checked == true || inputFemale.checked == false && inputMale.checked == false){
+    if(inputMale.checked == true && inputFemale.checked == true || inputMale.checked == true && inputBotts.checked == true 
+        || inputBotts.checked == true && inputFemale.checked == true || inputFemale.checked == false && inputMale.checked == false && inputBotts.checked == false
+    ){
 
-        alert("Selecione apenas 1")
+        alert("Selecione 1")
         return
 
     }else if(inputName == ""){
@@ -30,20 +46,21 @@ const gerar = () =>{
 
         if(inputMale.checked == true){
 
-            selected = "male"
+            selected = "avataaars"
 
         }else if(inputFemale.checked == true){
 
-            selected = "female"
+            selected = "micah"
 
-        }else if(inputInitial.checked == true){
+        }else if(inputBotts.checked == true){
 
-            selected = "initial"
+            selected = "bottts"
 
         }
 
         inputName = inputName.toLowerCase()
 
+        console.log(`https://avatars.dicebear.com/api/${selected}/${inputName}.svg`)
         img.src = `https://avatars.dicebear.com/api/${selected}/${inputName}.svg`
 
     }
