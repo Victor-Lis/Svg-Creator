@@ -3,8 +3,6 @@ img.style.display = "none"
 
 const gerar = () =>{
 
-    window.navigator.vibrate(200);
-
     var selected = ''
 
     var inputName = document.getElementById("nome").value
@@ -35,9 +33,12 @@ const gerar = () =>{
         || inputBotts.checked == true && inputFemale.checked == true || inputFemale.checked == false && inputMale.checked == false && inputBotts.checked == false
     ){
 
-        alert("Selecione 1")
-        return
+        window.navigator.vibrate(200);
 
+        alert("Selecione 1")
+
+        return
+        
     }else if(inputName == ""){
 
         alert("Preencha seu nome!")
