@@ -78,11 +78,14 @@ const gerar = () =>{
         console.log(`https://avatars.dicebear.com/api/${selected}/${inputName}.svg`)
         img.src = `https://avatars.dicebear.com/api/${selected}/${inputName}.svg`
 
+        window.navigator.vibrate(200,10,200);
+
         img.requestFullscreen()
 
         setTimeout(() => {
 
             document.exitFullscreen();
+            window.navigator.vibrate(200,10,200);
 
         },3000)
 
