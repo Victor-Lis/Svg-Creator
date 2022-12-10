@@ -3,6 +3,8 @@ img.style.display = "none"
 
 const gerar = () =>{
 
+    window.navigator.vibrate(200);
+
     var selected = ''
 
     var inputName = document.getElementById("nome").value
