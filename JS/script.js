@@ -80,6 +80,12 @@ const gerar = () =>{
 
         img.requestFullscreen()
 
+        setTimeout(() => {
+
+            document.exitFullscreen();
+
+        },3000)
+
     }
 
 }
