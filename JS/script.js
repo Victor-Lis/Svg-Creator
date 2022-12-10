@@ -83,13 +83,13 @@ const gerar = () =>{
         window.navigator.vibrate(200,10,200);
 
         img.requestFullscreen()
-        imgFullScreenTrack = 'full'
+        imgFullScreenTrack = 'no full'
 
         setTimeout(() => {
 
             document.exitFullscreen();
             window.navigator.vibrate(200,10,200);
-            imgFullScreenTrack = 'no full'
+            imgFullScreenTrack = 'full'
 
         },3000)
 
