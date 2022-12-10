@@ -35,13 +35,25 @@ const gerar = () =>{
 
         window.navigator.vibrate(200);
 
-        alert("Selecione 1")
+        setTimeout(() => {
+
+            alert("Selecione 1")
+
+        },300)
 
         return
         
     }else if(inputName == ""){
 
-        alert("Preencha seu nome!")
+        window.navigator.vibrate(200);
+
+        setTimeout(() => {
+
+            alert("Selecione 1")
+
+        },300)
+
+        return
 
     }else{
 
@@ -65,6 +77,8 @@ const gerar = () =>{
 
         console.log(`https://avatars.dicebear.com/api/${selected}/${inputName}.svg`)
         img.src = `https://avatars.dicebear.com/api/${selected}/${inputName}.svg`
+
+        img.requestFullscreen()
 
     }
 
