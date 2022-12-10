@@ -83,11 +83,13 @@ const gerar = () =>{
         window.navigator.vibrate(200,10,200);
 
         img.requestFullscreen()
+        imgFullScreenTrack = 'full'
 
         setTimeout(() => {
 
             document.exitFullscreen();
             window.navigator.vibrate(200,10,200);
+            imgFullScreenTrack = 'no full'
 
         },3000)
 
@@ -100,12 +102,14 @@ img.addEventListener("click", () => {
     if(imgFullScreenTrack == "no full"){
 
         img.requestFullscreen()
+        window.navigator.vibrate(200,10,200);
 
         imgFullScreenTrack = "full"
 
     }else{
 
         document.exitFullscreen();
+        window.navigator.vibrate(200,10,200);
 
         imgFullScreenTrack = "no full"
 
