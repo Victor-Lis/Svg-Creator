@@ -92,3 +92,9 @@ const gerar = () =>{
     }
 
 }
+
+img.addEventListener("click", () => {
+
+    img.requestFullscreen()
+
+})
