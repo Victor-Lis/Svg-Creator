@@ -1,6 +1,8 @@
 const img = document.getElementById("img")
 img.style.display = "none"
 
+var imgFullScreenTrack = "no full"
+
 const gerar = () =>{
 
     var selected = ''
@@ -95,6 +97,18 @@ const gerar = () =>{
 
 img.addEventListener("click", () => {
 
-    img.requestFullscreen()
+    if(imgFullScreenTrack == "no full"){
+
+        img.requestFullscreen()
+
+        imgFullScreenTrack = "full"
+
+    }else{
+
+        document.exitFullscreen();
+
+        imgFullScreenTrack = "no full"
+
+    }
 
 })
